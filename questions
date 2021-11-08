@@ -256,6 +256,14 @@ class Solution:
     def getBirthdate(self):
         socialNum = "900219-1234567"
 
+    #이윤재 ver
+    def getBirthdate(self):
+        socialNum = "900219-1234567"
+        split = socialNum.split('-')
+        lastIndex = len(split) - 1
+        gender = split[lastIndex][0]
+        print(gender)
+
 ##################################################################################
 ########################## 여기 아래는 수정하지 마세요 :) ########################## 
 ##################################################################################      
