@@ -143,6 +143,15 @@ class Solution:
             # --> 꼭 루프 두 번 안쓰셔도 괜찮아요! 간단하게 잘 푸셧네요 ㅎㅎ
             print('*' * int(i+1))
 
+    #이윤재 ver
+
+    def drawStar(self):
+        for i in range(0,5):
+            print('*',end='')
+            for j in range(0,i):
+                print('*',end='')
+            print()
+
     #5. for 문을 이용하여서 아래의 모양을 만들어주세요 (4번 )
 
     #프로그램을 실행했을 때의 출력 예제는 아래와 같습니다.
