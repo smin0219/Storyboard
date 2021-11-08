@@ -202,6 +202,18 @@ class Solution:
                 print(" "*b,s)
 
 
+    #이윤재 ver
+
+    def drawStar_adv(self):
+        start = 0
+        end = 4
+        for i in range(start, end + 1):
+            print(' ' * abs(2 - i), '*', end = '')
+            if (start < i and i < end):
+                print(' ' * abs(abs(2 - i) * 2 - 2), '*', end = '')
+            print()
+
+
     #6. 구구단 만들기.
     # input값을 입력 받아서 각 수에 맞는 구구단을 출력해주세요.
     
