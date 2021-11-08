@@ -4,7 +4,7 @@ class Solution:
     #이름을 출력하는 프로그램을 만들어 보세요. 사람의 전체 이름은 보통 성과 이름으로 구성되어 있습니다.
     #이 프로그램에서는 이름과 성을 각각 입력하였을 때의 전체 이름을 출력하는 방식으로 프로그램을 작성해 주세요.
     #출력된 전체 이름의 형태는 다음과 같습니다: 성, 이름 
-    #input() 과 print()를 사용해서 푼다.2
+    #input() 과 print()를 사용해서 푼다. 1
     
     #예제: 
     #Enter the last name: [Miller] <== 입력
@@ -42,7 +42,7 @@ class Solution:
         lastName = input()
         print('Enter the first name:')
         firstName = input()
-        print('our name is ', lastName, firstName)
+        print('Your name is', lastName, firstName)
 
     
     #2. 입력받은 숫자들의 평균을 구하기
@@ -77,6 +77,17 @@ class Solution:
         print('Third score')
         thirdScore = int(input())
         print ('Your average score is:', (firstScore+secondScore+thirdScore)/3 )
+
+
+    #이윤재 ver
+
+    def printName(self):
+        print('Enter the last name:')
+        lastName = input()
+        print('Enter the first name:')
+        firstName = input()
+        print('Your name is', lastName, firstName)
+
 
     #3. 리스트 전체를 출력해보자
     #입력값으로 들어온 리스트 전체를 출력하는 프로그램을 작성해 주세요.
