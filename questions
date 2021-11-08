@@ -240,6 +240,11 @@ class Solution:
     #예제: 
     #"a:b:c:d" --> "a#b#c#d"
 
+    #이윤재 ver
+    def replaceWord(self):
+        original = "a:b:c:d"
+        print(original.replace(':', '#'))
+
     #8. 주민등록번호 뒷자리의 맨 첫 번째 숫자는 성별을 나타냅니다.
     # 주민등록번호에서 성별을 나타내는 숫자를 출력해 주세요.
 
