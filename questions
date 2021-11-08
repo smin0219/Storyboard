@@ -42,7 +42,7 @@ class Solution:
         lastName = input()
         print('Enter the first name:')
         firstName = input()
-        print('Your name is ', lastName, firstName)
+        print('Your name is', lastName, firstName)
 
     #김승배 ver
     def printName(self):
