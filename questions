@@ -11,6 +11,8 @@ class Solution:
     #Enter the first name: [Chris] <== 입력
     #Your name is [Miller, Chris] <== 출력
     
+    #김재희 ver
+
     def printName(self):
         print('Enter the last name: ')
         #Python interpreter 2.7로 하면 여기서 에러남, 3.10으로 하니 에러 안 남. 원래 몇으로 해야 하나요? - 재희
@@ -75,6 +77,8 @@ class Solution:
     # ***
     # ****
     # *****
+
+    #김재희 ver
 
     def drawStar(self):
         for i in range(0,5):
