@@ -22,6 +22,17 @@ class Solution:
         firstName = input()
         print('Your name is: ', lastName, firstName)
 
+
+    #이현수 ver
+
+    def printName(self):
+        print('성을 입력하세요 예)홍:')
+        lastName = input()
+        print('이름을 입력하세요 예)길동:')
+        firstName = input()
+        print('당신의 이름은:' , lastName, firstName)
+
+    
     #2. 입력받은 숫자들의 평균을 구하기
     #순자들의 평균을 구하는 프로그램을 작성해 봅시다. 평균을 위해 입력 받는 숫자는 총 세 개입니다.
     #세 개의 숫자를 입력받고 평균을 구하세요.
@@ -84,7 +95,7 @@ class Solution:
     #     *
 
     def drawStar_adv(self):
-
+        pass
 
 ##################################################################################
 ########################## 여기 아래는 수정하지 마세요 :) ########################## 
@@ -93,7 +104,7 @@ class Solution:
 sol = Solution()
 
 # print("######################## 1번 문제 ########################")
-# sol.printName()
+sol.printName()
 # print()
 # print("######################## 2번 문제 ########################")
 # sol.calculateAverage()
