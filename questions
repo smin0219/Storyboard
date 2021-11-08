@@ -42,7 +42,7 @@ class Solution:
         lastName = input()
         print('Enter the first name:')
         firstName = input()
-        print('our name is ', lastName, firstName)
+        print('Your name is ', lastName, firstName)
 
     #김승배 ver
     def printName(self):
@@ -94,6 +94,17 @@ class Solution:
         print('Third score')
         thirdScore = int(input())
         print ('Your average score is:', (firstScore+secondScore+thirdScore)/3 )
+
+    #이윤재 ver
+
+    def calculateAverage(self):
+        print('Enter the first score')
+        firstScore = int(input())
+        print('Enter the second score')
+        secondScore = int(input())
+        print('Enter the third score')
+        thirdScore = int(input())
+        print ('The average score is:', (firstScore+secondScore+thirdScore)/3)
 
     #3. 리스트 전체를 출력해보자
     #입력값으로 들어온 리스트 전체를 출력하는 프로그램을 작성해 주세요.
