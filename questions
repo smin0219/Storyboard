@@ -36,7 +36,6 @@ class Solution:
 
 
     #이윤재 ver
-
     def printName(self):
         print('Enter the last name:')
         lastName = input()
@@ -97,7 +96,6 @@ class Solution:
 
 
     #이윤재 ver
-
     def calculateAverage(self):
         print('Enter the first test score:')
         firstScore = float(input())
@@ -128,8 +126,7 @@ class Solution:
             x.append(a)
         print(x)
         
-    #이윤재 ver
-    
+    #이윤재 ver    
     def printList(self, list):
         # list = [1,5,8,8,5,5,8,8]
         # 아래 연습문제 실행코드에 list 정의 부분 주석 해제하고 실행할 경우 위 코드 필요 없는 듯..
@@ -165,7 +162,6 @@ class Solution:
             print('*' * int(i+1))
 
     #이윤재 ver
-
     def drawStar(self):
         for i in range(0, 5):
             print('*', end='')
@@ -203,7 +199,6 @@ class Solution:
 
 
     #이윤재 ver
-
     def drawStar_adv(self):
         start = 0
         end = 4
@@ -221,11 +216,18 @@ class Solution:
 
     #예제:
 
-    #Enter any number between 1 and 9: 3 <== 출력
-    # 3 6 9 12 15 18 21 24 27 <== 입력
+    #Enter any number between 1 and 9: 3 <== 입력
+    # 3 6 9 12 15 18 21 24 27 <== 출력
 
     def timesTable(self):
         pass
+
+    #이윤재 ver
+    def timesTable(self):
+        print('Enter any number between 1 and 9: ', end = '')
+        num = int(input())
+        for i in range(1, 10):
+            print(num * i, end = ' ')
 
     #7. 다음과 같은 문자열 a:b:c:d를 문자열의 replace 함수를 사용하여 a#b#c#d로 바꿔서 출력해 주세요.
 
