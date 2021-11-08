@@ -9,7 +9,7 @@ class Solution:
     #예제: 
     #Enter the last name: [Miller] <== 입력
     #Enter the first name: [Chris] <== 입력
-    #Your name is [Miller, Chris] <== 출력
+    #Your name is [Miller, Chris] <== 출력2
     
     #김재희 ver
 
