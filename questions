@@ -42,7 +42,7 @@ class Solution:
         lastName = input()
         print('Enter the first name:')
         firstName = input()
-        print('our name is ', lastName, firstName)
+        print('Your name is', lastName, firstName)
 
     #김승배 ver
     def printName(self):
@@ -95,6 +95,17 @@ class Solution:
         thirdScore = int(input())
         print ('Your average score is:', (firstScore+secondScore+thirdScore)/3 )
 
+    #이윤재 ver
+
+    def calculateAverage(self):
+        print('Enter the first score')
+        firstScore = int(input())
+        print('Enter the second score')
+        secondScore = int(input())
+        print('Enter the third score')
+        thirdScore = int(input())
+        print ('The average score is:', (firstScore+secondScore+thirdScore)/3)
+
     #3. 리스트 전체를 출력해보자
     #입력값으로 들어온 리스트 전체를 출력하는 프로그램을 작성해 주세요.
 
@@ -104,17 +115,6 @@ class Solution:
     
     # def printList(self, list):
     #     print("Answer: ", end='')
-
-    #김승배 ver
-    def printList(self, list):
-        x=[]
-        while True:
-            a=input("숫자를 입력하세요. \n 'q'를 입력하면 프로그램이 종료됩니다. :")
-            if a=="q":
-                break
-            x.append(a)
-        print(x)
-        
 
     #4. for 문을 이용하여서 아래의 모양을 만들어주세요. (** for 루프를 두번 사용하여야 합니다.)
     # 첫번째 라인에 별 한개, 두번째 라인에 별 두개 ... 
@@ -136,7 +136,7 @@ class Solution:
             # --> 꼭 루프 두 번 안쓰셔도 괜찮아요! 간단하게 잘 푸셧네요 ㅎㅎ
             print('*' * int(i+1))
 
-    #5. for 문을 이용하여서 아래의 모양을 만들어주세요 (4번 )
+    #5. for 문을 이용하여서 아래의 모양을 만들어주세요 (4번)
 
     #프로그램을 실행했을 때의 출력 예제는 아래와 같습니다.
 
@@ -150,6 +150,38 @@ class Solution:
 
     def drawStar_adv(self):
         pass
+
+    #6. 구구단 만들기.
+    # input값을 입력 받아서 각 수에 맞는 구구단을 출력해주세요.
+    
+    #프로그램을 실행했을 때의 출력 예제는 아래와 같습니다.
+
+    #예제:
+
+    #Enter any number between 1 and 9: 3 <== 출력
+    # 3 6 9 12 15 18 21 24 27 <== 입력
+
+    #7. 다음과 같은 문자열 a:b:c:d를 문자열의 replace 함수를 사용하여 a#b#c#d로 바꿔서 출력해 주세요.
+
+    def replaceWord(self):
+        original = "a:b:c:d"
+
+
+    #프로그램을 실행했을 때의 출력 예제는 아래와 같습니다.
+
+    #예제: 
+    #"a:b:c:d" --> "a#b#c#d"
+
+    #8. 주민등록번호 뒷자리의 맨 첫 번째 숫자는 성별을 나타냅니다.
+    # 주민등록번호에서 성별을 나타내는 숫자를 출력해 주세요.
+
+    #프로그램을 실행했을 때의 출력 예제는 아래와 같습니다.
+
+    #예제: 
+    #"900219-1234567" --> "900219"
+
+    def getBirthdate(self):
+        socialNum = "900219-1234567"
 
 ##################################################################################
 ########################## 여기 아래는 수정하지 마세요 :) ########################## 
