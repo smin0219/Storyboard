@@ -44,6 +44,9 @@ class Solution:
         firstName = input()
         print('our name is ', lastName, firstName)
 
+    #김승배 ver
+    def printName(self):
+        print("hello")
     
     #2. 입력받은 숫자들의 평균을 구하기
     #순자들의 평균을 구하는 프로그램을 작성해 봅시다. 평균을 위해 입력 받는 숫자는 총 세 개입니다.
@@ -130,7 +133,7 @@ class Solution:
 sol = Solution()
 
 # print("######################## 1번 문제 ########################")
-sol.printName()
+# sol.printName()
 # print()
 # print("######################## 2번 문제 ########################")
 # sol.calculateAverage()
