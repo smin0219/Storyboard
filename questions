@@ -172,6 +172,19 @@ class Solution:
     #    * *
     #     *
 
+    # 김승배 ver
+    def drawStar_adv(self):
+        s="*"
+        a=2
+        for i in range(0,5):
+            b=abs(a-(1*i))
+            if b==1:
+                print(" "*b,s,s)
+            elif b==0:
+                print(" "*b,s," ",s)
+            else:
+                print(" "*b,s)
+
     def drawStar_adv(self):
         pass
 
