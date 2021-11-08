@@ -134,6 +134,12 @@ class Solution:
         for x in list:
             print(x, end='')
 
+     #이현수 ver
+    def printList(self, list):
+        for i in list:
+            print(i, end='')
+           
+
     #4. for 문을 이용하여서 아래의 모양을 만들어주세요. (** for 루프를 두번 사용하여야 합니다.)
     # 첫번째 라인에 별 한개, 두번째 라인에 별 두개 ... 
 
