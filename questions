@@ -13,8 +13,10 @@ class Solution:
     
     def printName(self):
         print('Enter the last name: ')
-        lastName = input()
-        print(lastName)
+        lastName = input() #Python interpreter 2.7로 하면 여기서 에러남, 3.10으로 하니 에러 안 남. 원래 몇으로 해야 하나요? - 재희
+        print('Enter the first name: ')
+        firstName = input()
+        print('Your name is: ', lastName, firstName)
 
     #2. 입력받은 숫자들의 평균을 구하기
     #순자들의 평균을 구하는 프로그램을 작성해 봅시다. 평균을 위해 입력 받는 숫자는 총 세 개입니다.
@@ -70,8 +72,8 @@ class Solution:
 sol = Solution()
 
 # print("######################## 1번 문제 ########################")
-sol.printName()
-print()
+#sol.printName()
+#print()
 # print("######################## 2번 문제 ########################")
 # sol.calculateAverage()
 # print()
