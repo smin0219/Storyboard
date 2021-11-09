@@ -228,6 +228,21 @@ class Solution:
     
     # 김재희 ver
     def drawStar_adv(self):
+        rangeStart = 0
+        rangeEnd = 4
+        for i in range(rangeStart, rangeEnd+1):
+            if i == rangeStart or i == rangeEnd:
+                print(' ' * rangeEnd + '*')
+                continue
+            if i < (rangeEnd - i):
+                print(' ' * (rangeEnd - i) + '*' +' ' * i + '*')
+                continue
+            if i == (rangeEnd - i):
+                print(' ' * (rangeEnd - i) + '*' +' ' * (i + 1) + '*')
+                continue
+            if i > (rangeEnd - i):
+                print(' ' * i + '*' + ' ' * (rangeEnd - i) + '*')
+                continue
         
     # 김승배 ver
     def drawStar_adv(self):
