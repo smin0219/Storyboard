@@ -235,6 +235,13 @@ class Solution:
         for i in range(1, 10):
             print(num * i, end = ' ')
 
+    #김승배 ver
+    def timesTable(self):
+        a = int(input("Enter any number between 1 and 9 :"))
+        print(list(range(a, a*10,a)))
+
+
+
     #7. 다음과 같은 문자열 a:b:c:d를 문자열의 replace 함수를 사용하여 a#b#c#d로 바꿔서 출력해 주세요.
 
     def replaceWord(self):
