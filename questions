@@ -307,6 +307,11 @@ class Solution:
 
     #예제: 
     #"a:b:c:d" --> "a#b#c#d"
+    
+    #김재희 ver
+    def replaceWord(self):
+        original = "a:b:c:d"
+        print(original.replace(":", "#"))
 
     #이윤재 ver
     def replaceWord(self):
