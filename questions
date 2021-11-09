@@ -76,6 +76,17 @@ class Solution:
 
     # def calculateAverage(self):
     #     print("First Score: ", end='')
+    
+    #김재희 ver
+    def calculateAverage(self):
+        print("Enter the first test score: ")
+        firstScore = int(input())
+        print("Enter the second test score: ")
+        secondScore = int(input())
+        print("Enter the thrid test score: ")
+        thirdScore = int(input())
+        average = (firstScore + secondScore + thirdScore)/3
+        print("The average score is " + str(average))
 
     #김승배 ver
     def calculateAverage(self):
@@ -214,7 +225,10 @@ class Solution:
 
     def drawStar_adv(self):
         pass
-
+    
+    # 김재희 ver
+    def drawStar_adv(self):
+        
     # 김승배 ver
     def drawStar_adv(self):
         s="*"
