@@ -394,7 +394,21 @@ class Solution:
         elif a[7:8] == 2 or 4:
             print("여자입니다.")
         else:
-            print("잘못입력하였습니다.")        
+            print("잘못입력하였습니다.")      
+
+    #이현수 ver
+
+    def getBirthdate(self):
+        socialNum = "900219-1234567"
+
+        if(socialNum[7]=="1"):
+            print("Birthday is:", socialNum[0:6], '/', "Male")
+
+        elif(socialNum[7]=="2"):
+            print("Birthday is:", socialNum[0:6],'/', "Female")
+
+        else:
+            print("Birthday is:", socialNum[0:6], '/', "????")  
 
 ##################################################################################
 ########################## 여기 아래는 수정하지 마세요 :) ########################## 
