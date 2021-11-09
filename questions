@@ -334,6 +334,18 @@ class Solution:
 
     def getBirthdate(self):
         socialNum = "900219-1234567"
+        
+        
+    #김재희 ver
+    def getBirthdate(self):
+        socialNum = "900219-1234567"
+        gender = int(socialNum[7])      
+        if 1 == gender or 3 == gender:
+            print("Male")
+        elif 2 == gender or 4 == gender:
+            print("Female")
+        else:
+            print("Alien")
 
     #이윤재 ver
     def getBirthdate(self):
