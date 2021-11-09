@@ -238,7 +238,8 @@ class Solution:
     #김승배 ver
     def timesTable(self):
         a = int(input("Enter any number between 1 and 9 :"))
-        print(list(range(a, a*10,a)))
+        for i in range(a, a*10,a):
+            print(i, end=' ')
 
 
 
