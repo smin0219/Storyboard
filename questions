@@ -49,6 +49,12 @@ class Solution:
         b=input("Enter the first name: ")
         print("Your name is " , a , b)
 
+    #민성재 ver
+    def printName(self):
+        lastName = input("Enter the last name: ")
+        firstName = input("Enter the first name: ")
+        print(f"Your name is {lastName}, {firstName}")
+
     
     #2. 입력받은 숫자들의 평균을 구하기
     #숫자들의 평균을 구하는 프로그램을 작성해 봅시다. 평균을 위해 입력 받는 숫자는 총 세 개입니다.
@@ -105,6 +111,14 @@ class Solution:
         thirdScore = float(input())
         print ('The average score is', (firstScore + secondScore + thirdScore) / 3)
 
+    #민성재 ver
+    def calculateAverage(self):
+        firstScore = float(input("Enter the first test score: "))
+        secondScore = float(input("Enter the second test score: "))
+        thirdScore = float(input("Enter the third test score: "))
+
+        print("The average score is ", (firstScore + secondScore + thirdScore) / 3)
+
 
     #3. 리스트 전체를 출력해보자
     #입력값으로 들어온 리스트 전체를 출력하는 프로그램을 작성해 주세요.
@@ -124,8 +138,7 @@ class Solution:
             if a=="q":
                 break
             x.append(a)
-        for i in x:
-            print(i, end=' ')
+        print(x)
         
     #이윤재 ver    
     def printList(self, list):
@@ -139,8 +152,11 @@ class Solution:
     def printList(self, list):
         for i in list:
             print(i, end='')
-           
 
+    #민성재 ver
+    def printList(self, list):
+        print(*list)
+           
     #4. for 문을 이용하여서 아래의 모양을 만들어주세요. (** for 루프를 두번 사용하여야 합니다.)
     # 첫번째 라인에 별 한개, 두번째 라인에 별 두개 ... 
 
