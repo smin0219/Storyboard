@@ -259,6 +259,12 @@ class Solution:
         original = "a:b:c:d"
         print(original.replace(':', '#'))
 
+    #김승배 ver
+    def replaceWord(self):
+        original = "a:b:c:d"
+        a = original.replace(":","#")
+        print(a)
+
     #8. 주민등록번호 뒷자리의 맨 첫 번째 숫자는 성별을 나타냅니다.
     # 주민등록번호에서 성별을 나타내는 숫자를 출력해 주세요.
 
@@ -277,6 +283,16 @@ class Solution:
         lastIndex = len(split) - 1
         gender = split[lastIndex][0]
         print(gender)
+    
+    #김승배 ver
+    def getBirthdate(self):
+        a = str(input("주민등록번호를 입력하세요.(******-*******) :"))
+        if a[7:8] == 1 or 3:
+            print("남자입니다.")
+        elif a[7:8] == 2 or 4:
+            print("여자입니다.")
+        else:
+            print("잘못입력하였습니다.")        
 
 ##################################################################################
 ########################## 여기 아래는 수정하지 마세요 :) ########################## 
