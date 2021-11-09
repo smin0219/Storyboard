@@ -268,6 +268,23 @@ class Solution:
                 print(' ' * abs(abs(2 - i) * 2 - 2), '*', end = '')
             print()
 
+    #이현수 ver
+
+    def drawStar_adv(self):
+        s="*"
+        b=" "
+        n=2
+
+        for i in range(0,5):
+
+            if (abs(n-i)==0):
+                print (s, b, b, b, s)
+
+            elif (abs(n-i) ==1):
+                print(b, s, b, s, b)
+
+            elif (abs(n-i)==2):
+                 print(b, b, s, b,b)
 
     #6. 구구단 만들기.
     # input값을 입력 받아서 각 수에 맞는 구구단을 출력해주세요.
