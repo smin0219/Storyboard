@@ -210,6 +210,10 @@ class Solution:
         for i in range(1,6):
             print("*"*i)
 
+    #민성재 ver
+    def drawStar(self):
+        for i in range(1,6):
+            print('*' * i)
 
     #5. for 문을 이용하여서 아래의 모양을 만들어주세요 (4번 )
 
@@ -286,6 +290,17 @@ class Solution:
             elif (abs(n-i)==2):
                  print(b, b, s, b,b)
 
+    #민성재 ver
+    def drawStar_adv(self):
+        for row in range(5):
+            for column in range(5):
+                if abs(row-column) == 2 or row+column == 2 or row+column == 6:
+                    print('*', end='')
+                else:
+                    print(' ', end='')
+            print()
+
+
     #6. 구구단 만들기.
     # input값을 입력 받아서 각 수에 맞는 구구단을 출력해주세요.
     
@@ -321,6 +336,13 @@ class Solution:
 
          print(myNum*i, end=" ")
 
+    #민성재 ver
+    def timesTable(self):
+        num = int(input("Enter any number between 1 and 9: "))
+        for i in range(1, 10):
+            print(num * i, end=' ')
+
+
     #7. 다음과 같은 문자열 a:b:c:d를 문자열의 replace 함수를 사용하여 a#b#c#d로 바꿔서 출력해 주세요.
 
     def replaceWord(self):
@@ -350,10 +372,14 @@ class Solution:
 
     #이현수 ver
 
-    def relaceWord(self):
+    def replaceWord(self):
         original = "a:b:c:d"
         result = original.replace(":", "#")
         print(result)
+
+    #민성재 ver
+    def replaceWord(self):
+        print("a:b:c:d".replace(':', '#'))
 
     #8. 주민등록번호 뒷자리의 맨 첫 번째 숫자는 성별을 나타냅니다.
     # 주민등록번호에서 성별을 나타내는 숫자를 출력해 주세요.
@@ -408,7 +434,12 @@ class Solution:
             print("Birthday is:", socialNum[0:6],'/', "Female")
 
         else:
-            print("Birthday is:", socialNum[0:6], '/', "????")  
+            print("Birthday is:", socialNum[0:6], '/', "????") 
+
+    #민성재 ver
+    def getBirthdate(self):
+        socialNum = "900219-1234567"
+        print(socialNum[:6])
 
 ##################################################################################
 ########################## 여기 아래는 수정하지 마세요 :) ########################## 
