@@ -1,6 +1,6 @@
 from typing import List
 
-## 함수를 생성 예시 ##
+## 함수를 생성 예시 ##2
 ## def test(input:int) -> bool:
 ##
 ## 위의 생성된 test 함수에서 def 는 함수를 정의하는 파이썬의 명령어입니다.
