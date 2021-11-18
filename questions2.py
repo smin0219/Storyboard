@@ -16,6 +16,8 @@ from typing import List
 ## 위와 같은 형태이지만 다른 작성방식으로 input
 
 #1. isEven(number), isOdd(number), isPrime(number) 짝수인지 홀수인지 소수인지 확인해서 True/False 로 반환하는 메소드 3개를 만들어 주세요.
+def isEven(self):
+
 
 #2. 4개의 값을 받는 거리를 계산하고 두 포인트간에 거리를 반환하는 isDistance(x1, y1, x2, y2) 함수를 만들어주세요.
 
