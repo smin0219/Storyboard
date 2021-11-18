@@ -1,5 +1,7 @@
 from typing import List
+import math
 
+class JaeheePython:
 ## 함수를 생성 예시 ##
 ## def test(input:int) -> bool:
 ##
@@ -16,10 +18,28 @@ from typing import List
 ## 위와 같은 형태이지만 다른 작성방식으로 input
 
 #1. isEven(number), isOdd(number), isPrime(number) 짝수인지 홀수인지 소수인지 확인해서 True/False 로 반환하는 메소드 3개를 만들어 주세요.
-def isEven(self):
+    def isEven(self, number):
+        if number % 2 == 0:
+            print(True)
+        else:
+            print(False)
+            
+    def isOdd(self, number):
+        if number % 2 == 1:
+            print(True)
+        else:
+            print(False) 
+    
+    def isPrime(self, number):
+        
+        
 
 
 #2. 4개의 값을 받는 거리를 계산하고 두 포인트간에 거리를 반환하는 isDistance(x1, y1, x2, y2) 함수를 만들어주세요.
+
+    def isDistance(self, x1, y1, x2, y2):
+        a = (x2 - x1)**2 + (y2 - y1)**2
+        print("Distance: ", math.sqrt(a))
 
 #3. 문자열에서 정수 갯수 찾기
 # 문자를 파라미터 값으로 받고 문자열에서 숫자가 나오는 횟수를 더한 값을 리스트에 입력해서 반환하는 함수를 만들어주세요.
