@@ -17,8 +17,43 @@ from typing import List
 
 #1. isEven(number), isOdd(number), isPrime(number) 짝수인지 홀수인지 소수인지 확인해서 True/False 로 반환하는 메소드 3개를 만들어 주세요.
 
-#2. 4개의 값을 받는 거리를 계산하고 두 포인트간에 거리를 반환하는 isDistance(x1, y1, x2, y2) 함수를 만들어주세요.
+# def isEven(input: int) -> bool:
+#     if input % 2 == 0:
+#         return(True)
+#     else:
+#         return(False)
+# def isOdd(input: int) -> bool:
+#     if input % 2 == 1:
+#         return(True)
+#     else:
+#         return(False)
+# def isPrime(input: float) -> bool:
+#     if input % 2 == 1 or input % 2 == 0:
+#         return(False)
+#     else:
+#         return(True)      
+# 위 3개는 따로 따로 찾기
+def isEvenOddPrime(input: float) -> bool:
+    if input % 2 == 0:
+        return('Even')
+    elif input % 2 == 1:
+        return('Odd')
+    else:
+        return('Demical')  
+## 위에껀 한번에 찾기
+##print(isEven(7))
+##print(isOdd(7))
+##print(isPrime(1.5))
+##print(isEvenOddPrime(6))
 
+
+#2. 4개의 값을 받는 거리를 계산하고 두 포인트간에 거리를 반환하는 isDistance(x1, y1, x2, y2) 함수를 만들어주세요.
+import math
+def isDistance(x1, y1, x2, y2:float):
+    dis = math.sqrt(((abs(x1-x2)**2)+(abs(y1-y2)**2)))
+    return(dis)
+##print(isDistance(-6,6,-15,3))
+    
 #3. 문자열에서 정수 갯수 찾기
 # 문자를 파라미터 값으로 받고 문자열에서 숫자가 나오는 횟수를 더한 값을 리스트에 입력해서 반환하는 함수를 만들어주세요.
 
@@ -30,7 +65,15 @@ from typing import List
 #
 # 설명: 위의 입력값에서 2 두번, 3 한번, 6 한번이 나왔기 때문에,
 # 리스트에서 2에 대항하는 부분이 2, 3에 해당하는 부분이 1, 6에 해당하는 부분이 1 입니다.
-
+def numberCount():
+    innum = input()
+    out = []
+    for i in range(0,10):
+        x = innum.count(str(i))
+        out.append(x)
+    for o in out:
+        print(o, end=' ')
+##numberCount()
 
 #4. 
 # 리스트에 두 값을 더해서 타겟과 일치하는 값을 찾고 리스트에 인덱스를 리턴하는 프로그램을 작성해 주세요.
@@ -63,6 +106,26 @@ from typing import List
 #잘못된 target 값을 가지고 있습니다. <-- 결과
 # try except (jump2python 책 194페이지 참고)문 을 이용하여서 target 에 int 외에 값이 들어오는 경우를 처리해주세요.
 
+def findSumNumber():
+    num = []
+    out=[]
+    while True:
+        nums = input('숫자 리스트를 입력하세요. (q를 눌러 입력을 종료하세요.)')
+        if nums == 'q':
+            break
+        num.append(nums)
+    target = input('숫자의 합이 될 대상을 입력하세요.')
+    try:
+        for i in num:
+            if str(int(target)-int(i)) in num:
+                out.append(num.index(str(int(target)-int(i))))
+                out.append(num.index(i))
+                break
+        print(out)    
+    except:
+        print('잘못된 타겟입니다.')
+##findSumNumber()
+
 #5. 가장 긴 부분 문자열 찾기
 #반복되는 글자가 없는 문장내 가장 긴 문자열을 찾고 문자열의 길이를 리턴해주세요.
 
@@ -90,6 +153,26 @@ from typing import List
 #input = "" <--입력
 #0 <-- 결과
 
+def findLongestRepeatSTR():
+    String = input('문자를 입력하세요.')
+    x=[]
+    y=[]
+    z=[]
+    for i in range(0,len(String)-1):
+        x.append(String[i])
+        if String[i+1] in x:
+            y.append(x)
+            x=[]
+    for i in y:
+        z.append(len(i))
+    if not z == []:
+        out = max(z)
+    else:
+        out = 0
+    print(out)
+# findLongestRepeatSTR()
+
+
 #6. 회문 찾기
 #숫자가 회문인지 아닌지를 판단해서 리턴해주세요.
 
@@ -104,10 +187,24 @@ from typing import List
 #예제 3:
 #input = 10 <-- 입력
 #false <-- 결과
+def findPalindrome():
+    inNumber = str(input('숫자를 입력하세요.'))
+    center = len(inNumber)/2 + 1
+    if not center == int(center):
+        list = inNumber.split(inNumber[int(center)-1])
+        if list[0] == list[1]:
+            out = 'true'
+        else:
+            out = 'false'
+    else:
+        out = 'false'
+    print(out)
 
+# findPalindrome()
 
 ############################################ 테스트 영역 ############################################
 ####################################################################################################
 ####################################################################################################
 ####################################################################################################
 ####################################################################################################
+
