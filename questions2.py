@@ -158,6 +158,16 @@ ret5_4 = repeatedChars("")
 
 #6. 회문 찾기
 #숫자가 회문인지 아닌지를 판단해서 리턴해주세요.
+def isPalindrome(num:int) -> bool:
+    numToStr = str(num)
+    for i in range(int(len(numToStr) / 2)):
+        if numToStr[i] != numToStr[len(numToStr) - (i + 1)]:
+            return False
+    return True
+
+ret6_1 = isPalindrome(121)
+ret6_2 = isPalindrome(-101)
+ret6_3 = isPalindrome(10)
 
 #예제 1:
 #input = 121 <--입력
