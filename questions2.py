@@ -82,6 +82,8 @@ class JaeheePython:
 #찾아야하는 값이 9 이기 때문에 리스트의 0번째 인덱스 숫자인 2와 1번째 인덱스 숫자인 7을
 #더하면 9가 완성되기 때문에 정답은 [0,1] 입니다.
 
+
+
 #예제2 :
 #nums = [3,2,4], target = 6 <-- 입력
 #[0,2] <-- 결과
@@ -95,6 +97,30 @@ class JaeheePython:
 #nums = [1,2,3,4], target = 'a' <--입력
 #잘못된 target 값을 가지고 있습니다. <-- 결과
 # try except (jump2python 책 194페이지 참고)문 을 이용하여서 target 에 int 외에 값이 들어오는 경우를 처리해주세요.
+
+    def findTargetNumberIndex(self):     
+            try:
+                numbers = input("공백을 구분자로 하여 대상 리스트를 입력하세요. : ").split()
+                target = int(input("타겟 숫자를 입력하세요. : "))
+                targetIndex = []    
+                for i in numbers[:]:
+                    leftNumbers = numbers.copy() #그냥 같다고 하면 같은 리스트로 서로 영향 받음
+                    del leftNumbers[leftNumbers.index(i)]
+                    
+                    if len(targetIndex) == 0: 
+                        for j in leftNumbers[:]:
+                            if int(i) + int(j) == target:
+                                targetIndex.append(numbers.index(i))
+                                targetIndex.append(numbers.index(j))
+                                print(targetIndex)
+                                break
+                            else:
+                                continue
+                    else:
+                        break
+            except :
+                print("잘못된 target 값을 가지고 있습니다.")
+
 
 #5. 가장 긴 부분 문자열 찾기
 #반복되는 글자가 없는 문장내 가장 긴 문자열을 찾고 문자열의 길이를 리턴해주세요.
