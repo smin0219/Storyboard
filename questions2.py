@@ -30,7 +30,9 @@ def isPrime(number:int) -> bool:
             return False
     return True
 
-# ret1 = isPrime(29)
+ret1_1 = isPrime(29)
+ret1_2 = isPrime(29)
+ret1_3 = isPrime(29)
 
 #2. 4개의 값을 받는 거리를 계산하고 두 포인트간에 거리를 반환하는 isDistance(x1, y1, x2, y2) 함수를 만들어주세요.
 def isDistance(x1, y1, x2, y2):
@@ -38,7 +40,7 @@ def isDistance(x1, y1, x2, y2):
     distance = math.sqrt((pow((x2 - x1), 2) + pow((y2 - y1), 2)))
     return distance
 
-# ret2 = isDistance(1, 1, 2, 2)
+ret2 = isDistance(1, 1, 2, 2)
 
 #3. 문자열에서 정수 갯수 찾기
 # 문자를 파라미터 값으로 받고 문자열에서 숫자가 나오는 횟수를 더한 값을 리스트에 입력해서 반환하는 함수를 만들어주세요.
@@ -58,13 +60,32 @@ def calFrequency(test_str:str):
             freq[int(c)] += 1
     print(freq)
     
-# calFrequency('a3sber226')
+calFrequency('a3sber226')
 
 #4. 
 # 리스트에 두 값을 더해서 타겟과 일치하는 값을 찾고 리스트에 인덱스를 리턴하는 프로그램을 작성해 주세요.
 # 정답이 여러개가 있어도 발견한 첫번째 정답만 하고 리스트 내에 같은 위치에 있는 값을 두번 사용하면 안됩니다.
 # ** 리스트내에서 타겟 값을 구할수 없으면 [] 빈 리스트를 반납해주세요.
 # try except (jump2python 책 194페이지 참고)문 을 이용하여서 target 에 int 외에 값이 들어오는 경우를 처리해주세요.
+def addNumbers(nums:list, target) -> list:
+    indexes = []
+    target_int = 0
+    try:
+        target_int = int(target)
+    except:
+        print('잘못된 target 값을 가지고 있습니다.')
+        return indexes       
+    for i in range(len(nums)):
+        for j in range(i + 1, len(nums)):
+            if nums[i] + nums[j] == target_int:
+                indexes.append(i)
+                indexes.append(j)
+                return indexes
+    return indexes
+
+ret4_1 = addNumbers([2,7,11,15], 9)
+ret4_2 = addNumbers([3,2,4], 6)
+ret4_3 = addNumbers([1,2,3,4], 'a')
 
 #프로그램을 실행했을 때의 출력 예제는 아래와 같습니다.
 
@@ -79,7 +100,7 @@ def calFrequency(test_str:str):
 
 #예제2 :
 #nums = [3,2,4], target = 6 <-- 입력
-#[0,2] <-- 결과
+#[1,2] <-- 결과
 
 #설명:
 #주어진 리스트가 [3,2,4] 이고 리스트 내에서 두개의 값을 대헛
@@ -93,6 +114,23 @@ def calFrequency(test_str:str):
 
 #5. 가장 긴 부분 문자열 찾기
 #반복되는 글자가 없는 문장내 가장 긴 문자열을 찾고 문자열의 길이를 리턴해주세요.
+def repeatedChars(test_str:str) -> int:
+    if len(test_str) == 0:
+        return 0
+    if len(test_str) > 0:
+        indexList = [0]
+        lengthList = []
+        for i in range(1, len(test_str)):
+            if test_str[i] in test_str[indexList[len(indexList) - 1]: i]:            
+                indexList.append(i)
+        for i in range(1, len(indexList)):
+            lengthList.append(indexList[i] - indexList[i - 1])
+        return max(lengthList)
+
+ret5_1 = repeatedChars("abcabcbb")
+ret5_2 = repeatedChars("bbbbb")
+ret5_3 = repeatedChars("pwwkew")
+ret5_4 = repeatedChars("")
 
 #프로그램을 실행했을 때의 출력 예제는 아래와 같습니다.
 
