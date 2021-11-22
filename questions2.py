@@ -1,4 +1,5 @@
 from typing import List
+from math import *
 
 ## 함수를 생성 예시 ##2
 ## def test(input:int) -> bool:
@@ -16,8 +17,26 @@ from typing import List
 ## 위와 같은 형태이지만 다른 작성방식으로 input
 
 #1. isEven(number), isOdd(number), isPrime(number) 짝수인지 홀수인지 소수인지 확인해서 True/False 로 반환하는 메소드 3개를 만들어 주세요.
+def isEven(number:float):
+    return (number % 2) == 0
 
-#2. 4개의 값을 받는 거리를 계산하고 두 포인트간에 거리를 반환하는 isDistance(x1, y1, x2, y2) 함수를 만들어주세요.
+def isOdd(number):
+    return (number % 2) != 0
+
+def isPrime(number):
+    #edge case
+    if(number <= 1):
+        return False
+    
+    for i in range(2, number):
+        if(number % i == 0):
+            return False
+        
+    return True
+
+#2. 4개의 값을 받는 거리를 계산하고 두 포인트간에 거리를 반환하는 getDistance(x1, y1, x2, y2) 함수를 만들어주세요.
+def getDistance(x1:float, y1:float, x2:float, y2:float) -> float:
+    return sqrt((x2-x1)**2 + (y2-y1)**2)
 
 #3. 문자열에서 정수 갯수 찾기
 # 문자를 파라미터 값으로 받고 문자열에서 숫자가 나오는 횟수를 더한 값을 리스트에 입력해서 반환하는 함수를 만들어주세요.
@@ -111,3 +130,5 @@ from typing import List
 ####################################################################################################
 ####################################################################################################
 ####################################################################################################
+
+print(getDistance(0,0,1,1))
