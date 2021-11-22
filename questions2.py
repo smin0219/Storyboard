@@ -72,8 +72,9 @@ def isDistance(x1, y1, x2, y2):
     b = y2 - y1
     c = math.sqrt((a*a) + (b*b))
 
-    print ("Distance between", "(", x1, "," , y1, ")" , "(", x2, "," , y2, ")  is", c)
+      print ("Distance between", "(", x1, "," , y1, ")" , "(", x2, "," , y2, ")  is", c)
 
+print(isDistance(input, input, input, input))
 
 #3. 문자열에서 정수 갯수 찾기
 # 문자를 파라미터 값으로 받고 문자열에서 숫자가 나오는 횟수를 더한 값을 리스트에 입력해서 반환하는 함수를 만들어주세요.
