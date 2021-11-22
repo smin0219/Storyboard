@@ -72,9 +72,7 @@ def isDistance(x1, y1, x2, y2):
     b = y2 - y1
     c = math.sqrt((a*a) + (b*b))
 
-    print ("Distance between (x1,y1) and (x2,y2): ", c)
-
-print(isDistance(input, input, input, input))
+    print ("Distance between", "(", x1, "," , y1, ")" , "(", x2, "," , y2, ")  is", c)
 
 
 #3. 문자열에서 정수 갯수 찾기
