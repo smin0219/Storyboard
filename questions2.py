@@ -30,7 +30,7 @@ class JaeheePython:
         else:
             print(False) 
     
-    def isPrime(self, number):
+    #def isPrime(self, number):
         
         
 
@@ -52,6 +52,17 @@ class JaeheePython:
 #
 # 설명: 위의 입력값에서 2 두번, 3 한번, 6 한번이 나왔기 때문에,
 # 리스트에서 2에 대항하는 부분이 2, 3에 해당하는 부분이 1, 6에 해당하는 부분이 1 입니다.
+
+    def findInteger(self, numberandstring):
+        foundnumberList = [0,0,0,0,0,0,0,0,0,0]
+        for i in numberandstring[:]:
+            if i.isdigit():
+                foundnumberList[int(i)] += 1         
+            else:
+                continue
+        
+        print(foundnumberList)
+            
 
 
 #4. 
