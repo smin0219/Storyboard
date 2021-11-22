@@ -30,7 +30,15 @@ def isPrime(number:int) -> bool:
             return False
     return True
 
+# ret1 = isPrime(29)
+
 #2. 4개의 값을 받는 거리를 계산하고 두 포인트간에 거리를 반환하는 isDistance(x1, y1, x2, y2) 함수를 만들어주세요.
+def isDistance(x1, y1, x2, y2):
+    import math
+    distance = math.sqrt((pow((x2 - x1), 2) + pow((y2 - y1), 2)))
+    return distance
+
+# ret2 = isDistance(1, 1, 2, 2)
 
 #3. 문자열에서 정수 갯수 찾기
 # 문자를 파라미터 값으로 받고 문자열에서 숫자가 나오는 횟수를 더한 값을 리스트에 입력해서 반환하는 함수를 만들어주세요.
