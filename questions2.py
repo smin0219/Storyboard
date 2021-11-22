@@ -117,7 +117,7 @@ ret4_3 = addNumbers([1,2,3,4], 'a')
 def repeatedChars(test_str:str) -> int:
     if len(test_str) == 0:
         return 0
-    if len(test_str) > 0:
+    else:
         indexList = [0]
         lengthList = []
         for i in range(1, len(test_str)):
