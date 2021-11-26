@@ -63,8 +63,6 @@ class JaeheePython:
         
         print(foundnumberList)
             
-
-
 #4. 
 # 리스트에 두 값을 더해서 타겟과 일치하는 값을 찾고 리스트에 인덱스를 리턴하는 프로그램을 작성해 주세요.
 # 정답이 여러개가 있어도 발견한 첫번째 정답만 하고 리스트 내에 같은 위치에 있는 값을 두번 사용하면 안됩니다.
@@ -121,7 +119,6 @@ class JaeheePython:
             except :
                 print("잘못된 target 값을 가지고 있습니다.")
 
-
 #5. 가장 긴 부분 문자열 찾기
 #반복되는 글자가 없는 문장내 가장 긴 문자열을 찾고 문자열의 길이를 리턴해주세요.
 
@@ -149,6 +146,9 @@ class JaeheePython:
 #input = "" <--입력
 #0 <-- 결과
 
+
+
+
 #6. 회문 찾기
 #숫자가 회문인지 아닌지를 판단해서 리턴해주세요.
 
@@ -163,6 +163,15 @@ class JaeheePython:
 #예제 3:
 #input = 10 <-- 입력
 #false <-- 결과
+
+    def isPalindrome(self, number):
+        originalNumber = list(str(number))
+        reversedNumber = originalNumber[::-1]
+        
+        if originalNumber == reversedNumber:
+            print("true")
+        else:
+            print("false")
 
 
 ############################################ 테스트 영역 ############################################
