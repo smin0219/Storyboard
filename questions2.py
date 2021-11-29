@@ -88,6 +88,20 @@ print(isDistance(input, input, input, input))
 # 설명: 위의 입력값에서 2 두번, 3 한번, 6 한번이 나왔기 때문에,
 # 리스트에서 2에 대항하는 부분이 2, 3에 해당하는 부분이 1, 6에 해당하는 부분이 1 입니다.
 
+def findNumOfInt():
+    
+    text = input("Enter your text:")
+    listLeng = text.count(str())-1
+    myList = [0] * listLeng
+
+    for i in range (0, listLeng):
+        numCount = text.count(str(i))
+        myList[i] = int(numCount)
+        
+    print(myList)
+print(findNumOfInt())
+
+
 
 #4. 
 # 리스트에 두 값을 더해서 타겟과 일치하는 값을 찾고 리스트에 인덱스를 리턴하는 프로그램을 작성해 주세요.
