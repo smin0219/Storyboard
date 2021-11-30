@@ -134,6 +134,29 @@ print(findNumOfInt())
 #잘못된 target 값을 가지고 있습니다. <-- 결과
 # try except (jump2python 책 194페이지 참고)문 을 이용하여서 target 에 int 외에 값이 들어오는 경우를 처리해주세요.
 
+import itertools
+
+def returnIndex():
+    
+    nums = [2, 7, 11, 15]
+    target = input("Enter your target number:")
+
+    try: target = int
+       
+    except ValueError:
+        print("Enter the number. Not text") 
+
+
+    combi = list(itertools.combinations((nums),2))
+    numOfcombi = len(combi)
+
+    for i in (0, numOfcombi-1):
+        sumCombi = (combi[i][0] + combi[i][1])
+        if (str(sumCombi) == target):
+            print (combi[i])
+
+
+
 #5. 가장 긴 부분 문자열 찾기
 #반복되는 글자가 없는 문장내 가장 긴 문자열을 찾고 문자열의 길이를 리턴해주세요.
 
