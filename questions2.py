@@ -155,7 +155,7 @@ def returnIndex():
         if (str(sumCombi) == target):
             print (combi[i])
 
-
+print(returnIndex())
 
 #5. 가장 긴 부분 문자열 찾기
 #반복되는 글자가 없는 문장내 가장 긴 문자열을 찾고 문자열의 길이를 리턴해주세요.
