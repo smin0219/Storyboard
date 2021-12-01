@@ -160,6 +160,32 @@ print(returnIndex())
 #5. 가장 긴 부분 문자열 찾기
 #반복되는 글자가 없는 문장내 가장 긴 문자열을 찾고 문자열의 길이를 리턴해주세요.
 
+
+def returnTextLeng():
+
+    text = input("Enter your text: ")
+    textList = list(text)
+    lengList = len(textList)
+    substring = []
+    lengOfsubstring = []
+
+    print(textList)
+
+    for i in range(1, lengList+1):
+        substring.insert(i, textList[0:i])
+
+
+    for j in range(0, lengList):
+        numSubstring = list(set(textList)-set(substring[j]))
+        lengOfsubstring.append(len(numSubstring))
+        
+ 
+
+    maxLeng = max(lengOfsubstring)
+    print(maxLeng)
+
+
+
 #프로그램을 실행했을 때의 출력 예제는 아래와 같습니다.
 
 #예제1 :
