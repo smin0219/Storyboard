@@ -1,6 +1,7 @@
 from typing import List
 from math import *
 
+
 ## 함수를 생성 예시 ##2
 ## def test(input:int) -> bool:
 ##
@@ -13,117 +14,172 @@ from math import *
 
 ## 정리해서 말씀드리면 위의 함수는 test라는 이름을 가진 함수이고 input이라는 int 형태의 값을 받아서 True 나 False 값을 반환하는 함수입니다.
 
-## def test(input) -> bool: 
+## def test(input) -> bool:
 ## 위와 같은 형태이지만 다른 작성방식으로 input
 
-#1. isEven(number), isOdd(number), isPrime(number) 짝수인지 홀수인지 소수인지 확인해서 True/False 로 반환하는 메소드 3개를 만들어 주세요.
-def isEven(number:float):
+# 1. isEven(number), isOdd(number), isPrime(number) 짝수인지 홀수인지 소수인지 확인해서 True/False 로 반환하는 메소드 3개를 만들어 주세요.
+def is_even(number: int) -> bool:
     return (number % 2) == 0
 
-def isOdd(number):
+
+def is_odd(number: int) -> bool:
     return (number % 2) != 0
 
-def isPrime(number):
-    #edge case
-    if(number <= 1):
+
+def is_prime(number: int) -> bool:
+    # edge case
+    if number <= 1:
         return False
-    
+
     for i in range(2, number):
-        if(number % i == 0):
+        if number % i == 0:
             return False
-        
     return True
 
-#2. 4개의 값을 받는 거리를 계산하고 두 포인트간에 거리를 반환하는 getDistance(x1, y1, x2, y2) 함수를 만들어주세요.
-def getDistance(x1:float, y1:float, x2:float, y2:float) -> float:
-    return sqrt((x2-x1)**2 + (y2-y1)**2)
 
-#3. 문자열에서 정수 갯수 찾기
+# 2. 4개의 값을 받는 거리를 계산하고 두 포인트간에 거리를 반환하는 getDistance(x1, y1, x2, y2) 함수를 만들어주세요.
+def get_distance(x1: float, y1: float, x2: float, y2: float) -> float:
+    return sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
+
+
+# 3. 문자열에서 정수 갯수 찾기
 # 문자를 파라미터 값으로 받고 문자열에서 숫자가 나오는 횟수를 더한 값을 리스트에 입력해서 반환하는 함수를 만들어주세요.
 
-#프로그램을 실행했을 때의 출력 예제는 아래와 같습니다.
+# 프로그램을 실행했을 때의 출력 예제는 아래와 같습니다.
 
-#예제:
-#a3sber226 <-- 입력
-#[0,0,2,1,0,0,1,0,0,0] <-- 결과
+# 예제:
+# a3sber226 <-- 입력
+# [0,0,2,1,0,0,1,0,0,0] <-- 결과
 #
 # 설명: 위의 입력값에서 2 두번, 3 한번, 6 한번이 나왔기 때문에,
 # 리스트에서 2에 대항하는 부분이 2, 3에 해당하는 부분이 1, 6에 해당하는 부분이 1 입니다.
 
+def count_numbers(val):
+    result = [0] * 10
+    for ch in val:
+        if 47 < ord(ch) < 58:
+            result[int(ch)] += 1
+    return result
 
-#4. 
+
+# 4.
 # 리스트에 두 값을 더해서 타겟과 일치하는 값을 찾고 리스트에 인덱스를 리턴하는 프로그램을 작성해 주세요.
 # 정답이 여러개가 있어도 발견한 첫번째 정답만 하고 리스트 내에 같은 위치에 있는 값을 두번 사용하면 안됩니다.
 # ** 리스트내에서 타겟 값을 구할수 없으면 [] 빈 리스트를 반납해주세요.
 # try except (jump2python 책 194페이지 참고)문 을 이용하여서 target 에 int 외에 값이 들어오는 경우를 처리해주세요.
 
-#프로그램을 실행했을 때의 출력 예제는 아래와 같습니다.
+# 프로그램을 실행했을 때의 출력 예제는 아래와 같습니다.
 
-#예제1 :
-#nums = [2,7,11,15], target = 9 <-- 입력
-#[0,1] <-- 결과
+# 예제1 :
+# nums = [2,7,11,15], target = 9 <-- 입력
+# [0,1] <-- 결과
 
-#설명:
-#주어진 리스트가 [2,7,11,15] 이고 리스트 내에서 두개의 값을 더해서
-#찾아야하는 값이 9 이기 때문에 리스트의 0번째 인덱스 숫자인 2와 1번째 인덱스 숫자인 7을
-#더하면 9가 완성되기 때문에 정답은 [0,1] 입니다.
+# 설명:
+# 주어진 리스트가 [2,7,11,15] 이고 리스트 내에서 두개의 값을 더해서
+# 찾아야하는 값이 9 이기 때문에 리스트의 0번째 인덱스 숫자인 2와 1번째 인덱스 숫자인 7을
+# 더하면 9가 완성되기 때문에 정답은 [0,1] 입니다.
 
-#예제2 :
-#nums = [3,2,4], target = 6 <-- 입력
-#[0,2] <-- 결과
+# 예제2 :
+# nums = [3,2,4], target = 6 <-- 입력
+# [1,2] <-- 결과
 
-#설명:
-#주어진 리스트가 [3,2,4] 이고 리스트 내에서 두개의 값을 대헛
-#찾아야하는 값이 6 이기 때문에 리스트의 1번째 인덱스 숫자인 2와 2번째 숫자인 4를
-#더하면 6이 완성되기 때문에 정답은 [1,2] 입니다.
+# 설명:
+# 주어진 리스트가 [3,2,4] 이고 리스트 내에서 두개의 값을 대헛
+# 찾아야하는 값이 6 이기 때문에 리스트의 1번째 인덱스 숫자인 2와 2번째 숫자인 4를
+# 더하면 6이 완성되기 때문에 정답은 [1,2] 입니다.
 
-#예제3 :
-#nums = [1,2,3,4], target = 'a' <--입력
-#잘못된 target 값을 가지고 있습니다. <-- 결과
+# 예제3 :
+# nums = [1,2,3,4], target = 'a' <--입력
+# 잘못된 target 값을 가지고 있습니다. <-- 결과
 # try except (jump2python 책 194페이지 참고)문 을 이용하여서 target 에 int 외에 값이 들어오는 경우를 처리해주세요.
 
-#5. 가장 긴 부분 문자열 찾기
-#반복되는 글자가 없는 문장내 가장 긴 문자열을 찾고 문자열의 길이를 리턴해주세요.
+def find_target(nums, target):
+    if len(nums) == 0:
+        return []
 
-#프로그램을 실행했을 때의 출력 예제는 아래와 같습니다.
+    try:
+        if not isinstance(target, int):
+            raise ValueError()
 
-#예제1 :
-#input = "abcabcbb" <-- 입력
-#3 <-- 결과
+        for i in range(len(nums)):
+            first_val = nums[i]
 
-#설명:
-#abc후에 a가 다시 반복되기 때문에 
+            if first_val > target:
+                first_val = -first_val
 
-#예제2 :
-#input = "bbbbb" <-- 입력
-#1 <-- 결과
+            second_val = target - first_val
+            if second_val in nums[i + 1:]:
+                return [nums.index(first_val), nums.index(second_val)]
+    except ValueError as e:
+        return []
 
-#예제3:
-#input = "pwwkew" <-- 입력
-#3 <-- 결과
 
-#설명:
-#가장 긴 substring 은 wke 로 결과는 3 입니다.
+# 5. 가장 긴 부분 문자열 찾기
+# 반복되는 글자가 없는 문장내 가장 긴 문자열을 찾고 문자열의 길이를 리턴해주세요.
 
-#예제4 :
-#input = "" <--입력
-#0 <-- 결과
+# 프로그램을 실행했을 때의 출력 예제는 아래와 같습니다.
 
-#6. 회문 찾기
-#숫자가 회문인지 아닌지를 판단해서 리턴해주세요.
+# 예제1 :
+# input = "abcabcbb" <-- 입력
+# 3 <-- 결과
 
-#예제 1:
-#input = 121 <--입력
-#true <-- 결과
+# 설명:
+# abc후에 a가 다시 반복되기 때문에
 
-#예제 2:
-#input = -101 <-- 입력
-#false <-- 결과
+# 예제2 :
+# input = "bbbbb" <-- 입력
+# 1 <-- 결과
 
-#예제 3:
-#input = 10 <-- 입력
-#false <-- 결과
+# 예제3:
+# input = "pwwkew" <-- 입력
+# 3 <-- 결과
 
+# 설명:
+# 가장 긴 substring 은 wke 로 결과는 3 입니다.
+
+# 예제4 :
+# input = "" <--입력
+# 0 <-- 결과
+
+def longest_substring(val):
+    longest = ""
+    longest_len = 0
+    for i in range(len(val)-1):
+        if len(find_longest(i, val, longest)) > longest_len:
+            longest_len = len(find_longest(i, val, longest))
+    return longest_len
+
+
+def find_longest(index: int, orgstr: str, longest: str):
+    if orgstr[index] not in longest:
+        longest += orgstr[index]
+        index += 1
+        return find_longest(index, orgstr, longest)
+    else:
+        return longest
+
+
+# 6. 회문 찾기
+# 숫자가 회문인지 아닌지를 판단해서 리턴해주세요.
+
+# 예제 1:
+# input = 121 <--입력
+# true <-- 결과
+
+# 예제 2:
+# input = -101 <-- 입력
+# false <-- 결과
+
+# 예제 3:
+# input = 10 <-- 입력
+# false <-- 결과
+
+def is_palindrome(val):
+    if not isinstance(val, int):
+        return False
+    if str(val) == str(val)[::-1]:
+        return True
+    return False
 
 ############################################ 테스트 영역 ############################################
 ####################################################################################################
@@ -131,4 +187,7 @@ def getDistance(x1:float, y1:float, x2:float, y2:float) -> float:
 ####################################################################################################
 ####################################################################################################
 
-print(getDistance(0,0,1,1))
+# print(is_palindrome(121))
+# print(count_numbers('a3sber226'))
+# print(find_target([1,2,3,4], 'a'))
+print(longest_substring("pwwkew"))
