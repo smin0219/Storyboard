@@ -30,7 +30,15 @@ class JaeheePython:
         else:
             print(False) 
     
-    #def isPrime(self, number):
+    def isPrime(self, number):
+        remainder = []
+        for i in range(1, number):
+            remainder.append(number % i)           
+        del remainder[0]        
+        if 0 in remainder:
+            print("False")
+        else:
+            print("True")
         
         
 
