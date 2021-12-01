@@ -146,6 +146,36 @@ class JaeheePython:
 #input = "" <--입력
 #0 <-- 결과
 
+    def longestString(self, string):
+        sequenceNumber = 0
+        subString1 = []
+        subString2 = []
+        stringLength = []
+        
+        if len(string) != 0:           
+
+            for i in string:
+                sequenceNumber = sequenceNumber + 1
+                if sequenceNumber != len(string):               
+                    if i not in subString1:
+                        subString1.append(i)
+                    else:
+                        subString2 = subString1.copy()
+                        subString1.append(i)                    
+                        del subString1[:subString1.index(i)+1]
+                        stringLength.append(len(subString2))
+                        subString2.clear()                        
+                else:
+                    if i not in subString1:
+                        subString1.append(i)
+                        subString2 = subString1.copy()
+                        stringLength.append(len(subString2))
+                    else:
+                        subString2 = subString1.copy()
+                        stringLength.append(len(subString2))
+            print(max(stringLength))                            
+        else:            
+            print(0)
 
 
 
